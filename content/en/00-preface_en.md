@@ -1,97 +1,75 @@
-# Chapter 0: Preface — Shattering Your AI Assistant Illusions
+# Preface: Shattering Your AI Illusions
 
 ---
 
 ## TL;DR
 
-> You've probably been using Claude Code to "write code."
-> But what it can actually do is help you "think through problems, understand systems, and make decisions."
-> That difference determines whether you're a user of the tool, or its master.
+> You've probably been using Claude Code to "generate code."
+> Its real power is helping you think through problems, understand systems, and make decisions.
+> That gap is what separates people who use the tool from people who own it.
 
 ---
 
-## A Real Scenario
+## A Scene You'll Recognize
 
-1 AM. You're staring at a piece of Swift code.
+1 AM. You're staring at Swift code.
 
-The crash is in `viewDidLoad`, but no matter how hard you look, you can't see the problem. You open Claude, paste the code, and say: "Help me find what's wrong with this code."
+The crash is in `viewDidLoad`, but you can't see why. You open Claude, paste the code, and ask it to find the problem.
 
-Claude gives you an analysis that sounds reasonable. You change it accordingly, run it again—still crashing.
+Claude gives you an analysis that sounds plausible. You make the change, run it—still crashing.
 
-You ask again. It answers again. You change it again.
+You ask again. It answers. You change it again. An hour later, you discover the real culprit: a singleton three files away, causing a memory issue under a race condition.
 
-An hour later, you discover the real problem: a singleton three files away causing a memory issue under a race condition.
+Claude didn't lie to you. It just never knew those three files existed.
 
-**Claude didn't lie to you. It just didn't know those three files existed.**
-
-This is how most people use Claude Code: **leading a blind man into a dark room and asking him to find the light switch.**
+This is how most people use Claude Code: they walk a blindfolded person into a dark room and ask them to find the light switch.
 
 ---
 
-## Where the Real Problem Lies
+## The Real Problem Is Context
 
-It's not that Claude isn't smart enough.
+Claude Code only knows what you show it. Hand it one function, and that's its whole world. Hand it the full repo, and suddenly it can actually help.
 
-The problem is **context**.
-
-Claude Code only knows what you tell it. Give it one function, it only sees that function. Give it the whole repo, and it can truly help you analyze.
-
-**The first thing this book does is make you fully understand the concept of "context."** Because mastering context management is mastering 80% of Claude Code.
+Everything in this book flows from that single insight. Master context management and you've got 80% of Claude Code figured out.
 
 ---
 
-## Three Types of Claude Code Users
+## Three Types of Users
 
-**Type 1: Copy-Paste Users**
+**Type 1: Copy-Paste**
 
-Copy code in, copy answers out.
+Paste code in, copy answers out. Efficiency goes up maybe 20%, but something always feels off.
 
-Result: 20% efficiency gain, but always feels like something's missing.
+**Type 2: Conversation-Driven**
 
-**Type 2: Conversation-Driven Users**
+Treat Claude like a smart colleague, solve things through dialogue. 3–5x more effective—but it takes a lot of steering.
 
-Treat Claude Code like a smart colleague, solve problems conversationally.
+**Type 3: Systems Thinker**
 
-Result: 3-5x efficiency gain, but requires lots of guidance.
+Claude Code is woven into the whole workflow. It does the right thing at the right time without constant hand-holding. Not just faster—better.
 
-**Type 3: Systems Thinkers**
-
-Integrate Claude Code into the entire workflow, letting it do the right thing at the right time.
-
-Result: Not just efficiency—overall development quality jumps to a new level.
-
-**This book trains you from Type 1 to Type 3.**
+This book trains you from Type 1 to Type 3.
 
 ---
 
-## What You'll Discover
+## What You'll Realize
 
-After reading this book, you'll realize:
+By the end, a few things will click:
 
-1. **Claude Code's greatest strength isn't writing code**—it's helping you understand an unfamiliar codebase
-2. **Your prompt quality matters more than the model itself**
-3. **The CLAUDE.md file is the most underrated feature**—without exception
-4. **Workflow integration** is the true multiplier
-5. **An iOS developer who knows Claude Code well** can do the work of three people
-
----
-
-## What This Book Won't Teach You
-
-- How to use Claude Code to cheat (interviews, exams)
-- How to use it for bad purposes
-- Any technique I haven't personally used
-
-Every technique in this book has been battle-tested. Not theory—experience.
+- Claude Code's greatest strength isn't writing code—it's helping you understand a codebase you've never seen before
+- Your prompt quality matters more than the model's capability
+- CLAUDE.md is the single most underrated feature in the whole tool
+- Workflow integration is the real multiplier
+- An iOS developer who actually knows this tool can do the work of three people
 
 ---
 
-## Now, Begin
+## What This Book Won't Cover
 
-Open your terminal.
+How to cheat on interviews. Any technique I haven't personally shipped code with. Every technique here has been battle-tested. This is experience, not theory.
 
-Next chapter, we build the core mental model you need.
+---
 
-Without this model, everything else is a castle built on sand.
+Open your terminal. Next chapter, we build the mental model that makes everything else click.
 
 [→ Chapter 1: The Mental Model You Need](./01-mental-model_en.md)

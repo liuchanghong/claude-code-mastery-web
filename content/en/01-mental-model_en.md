@@ -1,166 +1,122 @@
-# Chapter 1: The Mental Model You Need
+# The Mental Model You Need
 
 ---
 
 ## TL;DR
 
-> Claude Code is an **AI Agent running in your local environment**.
-> It can read files, write files, run commands, and query the internet.
+> Claude Code is an AI Agent running in your local environment.
+> It reads files, writes files, runs commands, and queries the internet.
 > What it sees = the context you give it + what it finds itself.
-> Understand this, and you understand 90% of "why Claude behaves inconsistently."
+> Get this right and 90% of "why is Claude behaving weird" makes sense.
 
 ---
 
-## From ChatGPT to Claude Code: A Mental Shift
+## Ditch the ChatGPT Model
 
-Most people's first mental model when using Claude Code is still the ChatGPT model:
-
-```
-Me ──ask──> AI ──answer──> Me
-```
-
-This model is **wrong for Claude Code**.
-
-The real model is:
+Most people's mental model when they first use Claude Code is still this:
 
 ```
-Me ──task──> AI Agent ──read files──> your codebase
-                       ──write files──> your codebase
-                       ──execute commands──> your terminal
-                       ──query──> the internet
-                       ──return results──> Me
+Me ── ask ──> AI ── answer ──> Me
 ```
 
-**It's an Agent, not just a chatbot.**
+That's wrong. The real model is:
 
-This difference determines how you use it.
+```
+Me ── task ──> AI Agent ── reads files ──> your codebase
+                          ── writes files ──> your codebase
+                          ── runs commands ──> your terminal
+                          ── queries ──> the internet
+                          ── returns results ──> Me
+```
+
+It's an Agent, not a chatbot. This distinction changes everything about how you use it.
 
 ---
 
-## Core Concept 1: The Context Window
+## Concept 1: The Context Window
 
-Imagine Claude Code's "brain" as a whiteboard of finite size.
+Think of Claude's "brain" as a whiteboard with a fixed size.
 
 ```
-┌─────────────────────────────────┐
-│                                 │
-│   Claude's Context Window       │
-│                                 │
-│  Your conversation history      │
-│  Files you've opened            │
-│  Tool execution results         │
-│  Contents of CLAUDE.md          │
-│  ...                            │
-│                                 │
-│  [Limited capacity—old content  │
-│   gets "forgotten" when full]   │
-│                                 │
-└─────────────────────────────────┘
+┌──────────────────────────────────┐
+│  Claude's Context Window         │
+│                                  │
+│  Your conversation history       │
+│  Files you've shown it           │
+│  Tool execution results          │
+│  Contents of CLAUDE.md           │
+│  ...                             │
+│  [When full, old content fades]  │
+└──────────────────────────────────┘
 ```
 
-**Key principles:**
+More precise information in = more accurate output. Dump unrelated stuff in and performance drops. Long conversations cause Claude to gradually forget what you discussed at the start.
 
-- The more precise the information in context, the more accurate the response
-- Piling in irrelevant information degrades performance
-- Long conversations cause Claude to gradually "forget" early content
-
-**Practical implication:**
-
-Don't dump a 1000-line file and tell it to "just look around."
-Tell it to look at lines 234-267, because the problem is there.
+Don't paste a 1000-line file and say "just look around." Tell it to look at lines 234–267, because that's where the problem is.
 
 ---
 
-## Core Concept 2: Tool Use
+## Concept 2: Tool Calls
 
-Claude Code doesn't modify your files directly.
-
-It will:
-1. Think about what needs to be done
-2. Call a tool (read file, write file, run command, etc.)
-3. See what the tool returns
-4. Continue thinking
-5. Call the next tool
-6. …until the task is complete
+Claude Code doesn't modify your files directly. Its internal loop looks like this:
 
 ```
-Claude's internal loop:
-THINK → ACT → OBSERVE → THINK → ACT → OBSERVE → ...
+Think → Call tool → See result → Think → Call tool → See result → ...
 ```
 
-**This means:**
-
-Claude doesn't "write out" your code all at once. It **iterates**, just like a real programmer: reads the code first, understands it, writes, then verifies.
-
-So give it enough time. Don't rush it. A complex task may require a dozen tool calls.
+It iterates, just like a real engineer: read the code, understand it, write it, verify it. A complex task might need a dozen tool calls. Give it time to work.
 
 ---
 
-## Core Concept 3: The Permission Model
-
-Before taking any action, Claude Code decides whether to ask for your confirmation based on your permission settings.
-
-Three modes:
+## Concept 3: Permission Modes
 
 | Mode | Behavior | Best for |
 |------|----------|----------|
-| **Default** | Sensitive operations (write files, execute commands) require confirmation | Daily use |
-| **Auto-approve (--dangerously-skip-permissions)** | Fully automatic, no questions | Trusted projects, batch operations |
-| **Manual review** | Confirm every step | Critical code, production environments |
+| **Default** | Asks before writing files or running commands | Daily use |
+| **Auto-approve** (`--dangerously-skip-permissions`) | No questions, fully automatic | Trusted projects, batch work |
 
-**Recommendation:**
-
-Use default mode most of the time. For rapid iteration scenarios (writing tests, generating boilerplate), temporarily enable auto mode.
-**Never enable auto mode on production servers.**
+Default mode for most things. Auto mode when you need fast iteration on trusted code. Never on a production server.
 
 ---
 
-## Core Concept 4: What Claude Code Knows
+## Concept 4: What Claude Code Knows at Startup
 
-At startup, Claude Code knows by default:
+It knows:
+- Your current directory's file structure (it explores actively)
+- Whatever's in `CLAUDE.md`
+- Everything you've said in the conversation
 
-1. The **file structure** of your current directory (it will actively explore)
-2. The contents of `CLAUDE.md` (if it exists)
-3. Everything you've said in the conversation
-
-It won't automatically know:
-
-- The requirements in your head
-- Your code's "backstory"
+It doesn't know:
+- The requirements inside your head
+- Your code's backstory
 - Your team's conventions
-- Your project's architecture decisions
+- Why architecture decisions were made
 
-**So your first job is always: give it enough background.**
-
----
-
-## Core Concept 5: Claude Code vs. Code Completion Tools
-
-Many people compare Claude Code with Copilot or Cursor. That's the wrong comparison.
-
-| Dimension | Code completion tools | Claude Code |
-|-----------|----------------------|-------------|
-| Best for | Writing single lines/functions | Understanding and modifying entire systems |
-| Input method | Embedded in editor | Conversation + command line |
-| Context range | Near current file | Entire repo + internet |
-| Best work granularity | Micro (line/function) | Macro (module/feature) |
-| Greatest value | Speed | Understanding |
-
-**Best practice:** Use both together. Use Claude Code to understand and design; use code completion tools to implement quickly.
+Your first job is always: give it enough background.
 
 ---
 
-## Mental Model Checklist
+## Concept 5: Claude Code vs. Code Completion Tools
 
-Before continuing, make sure you can answer:
+| Dimension | Copilot / Cursor | Claude Code |
+|-----------|-----------------|-------------|
+| Best at | Single lines / functions | Understanding whole systems |
+| Context range | Near the current file | Full repo + internet |
+| Primary value | Speed | Understanding |
 
-- [ ] Is Claude Code a chatbot or an agent? What's the difference?
-- [ ] How does the context window limitation affect how I use it?
-- [ ] What are the three permission modes and when is each appropriate?
-- [ ] What does Claude Code know by default at startup, and what doesn't it know?
-
-If you can answer all of these, congratulations—you already understand it more deeply than 70% of Claude Code users.
+Best practice: use both. Claude Code for understanding and design; completion tools for fast implementation.
 
 ---
 
-[→ Chapter 2: Setup & Your First Critical Steps](./02-setup-and-first-steps_en.md)
+## Check Your Understanding
+
+Can you answer these?
+
+- Is Claude Code a chatbot or an agent? What's the practical difference?
+- How does the context window limit affect how you should use it?
+- When should you use auto-approve mode?
+- What does Claude Code know at startup, and what doesn't it know?
+
+If you've got those, you already understand this tool better than most people who use it.
+
+[→ Chapter 2: Setup & First Steps](./02-setup-and-first-steps_en.md)
