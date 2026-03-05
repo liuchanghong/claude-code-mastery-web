@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude Code 实战精通手册</title>
+  <meta name="description" content="一本让你读完就能用、用完就上瘾的 Claude Code 实战手册。The practical mastery handbook for Claude Code." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light" data-lang="zh">
+
+  <!-- Mobile overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <div class="brand">
+        <div class="brand-icon">CC</div>
+        <div class="brand-text">
+          <div class="brand-name">Claude Code</div>
+          <div class="brand-sub" data-zh="实战精通手册" data-en="Mastery Handbook">实战精通手册</div>
+        </div>
+      </div>
+      <button class="close-sidebar" id="closeSidebar" aria-label="Close sidebar">✕</button>
+    </div>
+
+    <div class="sidebar-controls">
+      <button class="ctrl-btn lang-btn" id="langBtn" title="Switch language">
+        <span class="lang-zh">中</span>
+        <span class="divider">/</span>
+        <span class="lang-en">EN</span>
+      </button>
+      <button class="ctrl-btn theme-btn" id="themeBtn" title="Toggle theme">
+        <span class="icon-sun">☀</span>
+        <span class="icon-moon">☽</span>
+      </button>
+    </div>
+
+    <nav class="chapter-list" id="chapterList"></nav>
+  </aside>
+
+  <!-- Main -->
+  <div class="layout">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="topbar-title" id="topbarTitle"></div>
+      <div class="topbar-right">
+        <button class="ctrl-btn lang-btn-top" id="langBtnTop" title="Switch language">
+          <span class="lang-zh">中文</span>
+          <span class="lang-en">EN</span>
+        </button>
+        <button class="ctrl-btn theme-btn-top" id="themeBtnTop" title="Toggle theme">
+          <span class="icon-sun">☀</span>
+          <span class="icon-moon">☽</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+    <main class="content-wrap">
+      <article class="content" id="content">
+        <div class="loading-state">
+          <div class="spinner"></div>
+        </div>
+      </article>
+      <nav class="pager" id="pager"></nav>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
