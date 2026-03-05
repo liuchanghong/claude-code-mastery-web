@@ -1,6 +1,9 @@
 /* ============================================================
-   Claude Code Mastery — App
+   Claude Code for Coders — App
    ============================================================ */
+
+const SITE_NAME = 'Claude Code for Coders';
+const SITE_URL  = 'https://liuchanghong.github.io/claude-code-mastery-web/';
 
 const CHAPTERS = [
   {
@@ -276,7 +279,30 @@ function updateSidebarActive(idx) {
    ============================================================ */
 function updateTopbar(title) {
   topbarTitle.textContent = title;
-  document.title = `${title} — Claude Code Mastery`;
+
+  // Dynamic <title>
+  document.title = `${title} — ${SITE_NAME}`;
+
+  // Dynamic meta description
+  const chap = CHAPTERS[currentChapterIdx];
+  const desc = currentLang === 'en'
+    ? `${chap.en.title} — Part of "${SITE_NAME}": the practical Claude Code handbook for developers. Free, bilingual (EN/ZH).`
+    : `${chap.zh.title} — "${SITE_NAME}" 的一部分：写给真正写代码的人的 Claude Code 实战指南。`;
+
+  setMeta('name',     'description',       desc);
+  setMeta('property', 'og:title',          document.title);
+  setMeta('property', 'og:description',    desc);
+  setMeta('property', 'og:url',            `${SITE_URL}#${chap.id}`);
+  setMeta('name',     'twitter:title',     document.title);
+  setMeta('name',     'twitter:description', desc);
+
+  // html lang attribute
+  document.documentElement.lang = currentLang === 'zh' ? 'zh' : 'en';
+}
+
+function setMeta(attr, key, value) {
+  let el = document.querySelector(`meta[${attr}="${key}"]`);
+  if (el) el.setAttribute('content', value);
 }
 
 function updatePager(idx) {

@@ -642,6 +642,47 @@ body {
 }
 
 /* ============================================================
+   Brand "for Coders" accent
+   ============================================================ */
+.brand-for {
+  background: var(--brand-icon-bg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 40px;
+  transition: border-color var(--transition);
+}
+.footer-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.footer-inner a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.footer-inner a:hover { color: var(--accent); }
+.footer-sep { opacity: 0.4; }
+
+@media (max-width: 600px) {
+  .site-footer { padding: 16px 20px; }
+}
+
+/* ============================================================
    Animations
    ============================================================ */
 @keyframes fadeIn {

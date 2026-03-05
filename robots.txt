@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://liuchanghong.github.io/claude-code-mastery-web/sitemap.xml
