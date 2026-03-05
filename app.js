@@ -83,7 +83,7 @@ const CHAPTERS = [
 /* ============================================================
    State
    ============================================================ */
-let currentLang = localStorage.getItem('cc-lang') || 'zh';
+let currentLang = localStorage.getItem('cc-lang') || 'en';
 let currentTheme = localStorage.getItem('cc-theme') || 'light';
 let currentChapterIdx = 0;
 const cache = {};
