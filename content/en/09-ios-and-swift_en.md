@@ -2,15 +2,11 @@
 
 ---
 
-## TL;DR
-
-> There are many scenarios where Claude Code particularly excels in iOS development.
-> This chapter is an iOS developer's exclusive playbook,
-> covering Swift migrations, SwiftUI, Xcode config, App Store prep, and more.
+This chapter is an iOS developer's playbook — patterns for the scenarios where Claude Code genuinely excels in Swift and iOS work. Swift migrations, SwiftUI, Xcode config, App Store prep, and more.
 
 ---
 
-## Claude Code's iOS Task Power Rankings
+## Where Claude Code Shines for iOS
 
 1. **Code migration**: ObjC→Swift, UIKit→SwiftUI, completion→async/await
 2. **Understanding complex APIs**: UIKit lifecycle, SwiftUI data flow
@@ -81,7 +77,7 @@ claude
 
 ### Analyzing Complex Views
 
-SwiftUI data flow can be hard to understand—let Claude map it out:
+SwiftUI data flow can be hard to understand — let Claude map it out:
 
 ```bash
 claude
@@ -135,7 +131,7 @@ claude
 > Help me analyze:
 > 1. State changes for this ViewController in the app lifecycle
 > 2. What's the right timing to refresh data
-> 3. sceneDidBecomeActive vs viewWillAppear—which is more appropriate?
+> 3. sceneDidBecomeActive vs viewWillAppear — which is more appropriate?
 > 4. How to avoid double refreshing (both lifecycle methods firing)
 ```
 
@@ -226,7 +222,7 @@ claude
 > 5. Graceful permission request (explain before requesting)
 >
 > Code should target iOS 16+, use Swift Concurrency
-> Step by step—let me confirm each step before continuing
+> Step by step — let me confirm each step before continuing
 ```
 
 ---
@@ -300,9 +296,9 @@ claude
 
 ---
 
-## Chapter Summary: iOS Developer's Claude Code Checklist
+## iOS Developer's Quick Reference
 
-In daily work, prioritize Claude Code for these scenarios:
+Keep these prompts handy during your daily work:
 
 - [ ] Wrote a completion handler? Let Claude migrate to async/await
 - [ ] Got a Crash Log? Paste it straight to Claude for analysis

@@ -2,11 +2,7 @@
 
 ---
 
-## TL;DR
-
-> Claude Code can read any file, write any file, and search across the entire repo.
-> Most people only use "help me fix this piece of code."
-> This chapter covers the remaining 80%.
+Claude Code can read any file, write any file, and search across the entire repo. Most people only use "help me fix this piece of code." This chapter covers the remaining 80%.
 
 ---
 
@@ -56,7 +52,7 @@ The difference: you're telling it the **goal** and letting it decide the **path*
 
 ## Precise Targeting for Modifications
 
-Don't let Claude guess what you want to change—be precise.
+Don't let Claude guess what you want to change — be precise.
 
 ### By Function Name
 
@@ -83,7 +79,7 @@ Don't let Claude guess what you want to change—be precise.
 
 ## Multi-File Coordinated Changes
 
-This is Claude Code's true superpower.
+This is where Claude Code really earns its keep.
 
 ### Scenario: Renaming a Class
 
@@ -103,7 +99,7 @@ Claude will:
 3. Wait for your confirmation
 4. Modify them one by one
 
-**This task would take 30 minutes by hand. Claude does it in 30 seconds.**
+A manual rename like this takes 30 minutes. Claude does it in 30 seconds.
 
 ---
 
@@ -187,7 +183,7 @@ Claude will:
 ### Understanding Complex Logic
 
 ```
-> Read PaymentProcessor.swift—this code logic is complex
+> Read PaymentProcessor.swift — this code logic is complex
 > Describe the entire processing flow in a text flowchart (use indentation for hierarchy)
 > Emphasize the handling of edge cases
 ```
@@ -226,7 +222,7 @@ Claude will:
 > Start with step 1: extract data handling logic into UserViewModel
 
 # Step 4: Validate
-> Check the modified code—are there any missed cases?
+> Check the modified code — are there any missed cases?
 
 # Step 5: Continue
 > Good, continue to step 2
@@ -249,16 +245,6 @@ Claude Code **won't proactively do**:
 - Push to remote (you need to run git push)
 - Submit to the App Store
 - Any irreversible cloud operations
-
----
-
-## Chapter Summary
-
-- Let Claude explore autonomously—give goals, not paths
-- Precisely specify change locations (filename + function name + line numbers)
-- Multi-file coordinated changes are Claude Code's biggest efficiency advantage
-- Bulk operations (generating tests, docs, boilerplate) eliminate huge amounts of repetitive work
-- Use the **Plan → Execute → Verify → Continue** loop for large tasks
 
 ---
 

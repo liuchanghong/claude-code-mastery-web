@@ -2,12 +2,7 @@
 
 ---
 
-## TL;DR
-
-> What you say matters more than how smart Claude Code is.
-> A bad question + a smart AI = a bad answer.
-> A good question + an average AI = a stunning answer.
-> This chapter has the highest ROI of anything in this book.
+Most people only tell Claude what they want. The other two ingredients — context and constraints — are what actually determine whether you get a useful answer.
 
 ---
 
@@ -62,9 +57,9 @@ Result: A precise, immediately usable solution.
 
 ---
 
-## The Golden Formula: Goal + Context + Constraints + Action Request
+## The Format That Works: Goal + Context + Constraints + Action
 
-Every good instruction contains these four elements (you don't need to write them all out every time, but think through them):
+Every good instruction has these four elements. You don't need to write them all out every time, but think through them:
 
 ```
 [Goal] I want X
@@ -171,7 +166,7 @@ For: code review, quality checks
 
 ---
 
-## Magic Words for Instructions
+## Phrases Worth Memorizing
 
 These words significantly improve Claude's behavior:
 
@@ -187,7 +182,7 @@ These words significantly improve Claude's behavior:
 
 ---
 
-## The Art of Context: How Much Is Just Right
+## How Much Context Is Just Right
 
 **Too little**: Claude guesses your intent, answer goes off track
 
@@ -207,7 +202,7 @@ so dequeueReusableCell isn't available"
 
 ## Multi-Turn Conversation Strategy
 
-Claude Code's multi-turn conversations are stateful—use that well.
+Claude Code's multi-turn conversations are stateful — use that well.
 
 **Wrong approach: restart from scratch every time**
 
@@ -222,11 +217,11 @@ Turn 2: Help me look at UserService.swift again, I mentioned before that perform
 ```
 Turn 1: Read UserService.swift and tell me your understanding of this class
 Turn 2: OK, how is the performance of the fetchUser method?
-Turn 3: I want to add caching—what options do you have?
+Turn 3: I want to add caching — what options do you have?
 Turn 4: Use the second option, but change the cache time to 5 minutes
 ```
 
-In this conversation, Claude's context **progressively accumulates**—each turn builds on the previous understanding.
+In this conversation, Claude's context **progressively accumulates** — each turn builds on the previous understanding.
 
 ---
 
@@ -274,14 +269,6 @@ In this conversation, Claude's context **progressively accumulates**—each turn
 
 ---
 
-## Chapter Summary: 5 Principles
-
-1. **Goal + Context + Constraints + Action**: the four elements of a good instruction
-2. **Precision over volume**: more isn't better, more accurate is better
-3. **Plan before code**: confirm direction on complex tasks before starting
-4. **Progressive multi-turn**: make good use of conversation continuity
-5. **Specific corrections**: when it's wrong, say specifically what's wrong, not just "incorrect"
-
----
+The five things that matter most: give Claude a goal, context, and constraints together; be precise rather than verbose; confirm the plan before writing code; use conversation continuity; and when Claude is wrong, say exactly what's wrong.
 
 [→ Chapter 4: Code Operations Mastery](./04-file-and-code-operations_en.md)

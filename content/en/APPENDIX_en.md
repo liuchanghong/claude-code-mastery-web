@@ -1,7 +1,6 @@
 # Appendix: Quick Reference
 
-> Everything you need: commands, shortcuts, flags, and templates.
-> Come here first when you hit a problem.
+> Everything you need in one place: commands, shortcuts, flags, and templates.
 
 ---
 
@@ -163,7 +162,7 @@ Reproduction scenario:
 
 Relevant code is in [filename].
 
-First analyze the root cause—wait for my confirmation before fixing.
+First analyze the root cause — wait for my confirmation before fixing.
 ```
 
 ### Feature Implementation
@@ -189,7 +188,7 @@ Problems: [current issues]
 Goals: [refactoring objectives]
 Constraints: [things that can't change]
 
-Implement step by step—project still runs after each step.
+Implement step by step — project still runs after each step.
 ```
 
 ### Code Review
@@ -201,7 +200,7 @@ Review this code, focusing on:
 3. [concern 3]
 
 Output as a list, sorted by severity.
-No positive feedback—issues only.
+No positive feedback — issues only.
 ```
 
 ---
@@ -297,13 +296,13 @@ Or `Ctrl+C` and start a new session.
 ```
 Or:
 ```
-> Your previous output was cut off—continue from [last content]
+> Your previous output was cut off — continue from [last content]
 ```
 
 **Issue: Claude keeps giving the same wrong answer**
 ```
 > Let's approach this from a different angle.
-> Forget the previous analysis—start fresh from [different starting point]
+> Forget the previous analysis — start fresh from [different starting point]
 ```
 
 **Issue: CLAUDE.md not taking effect**
@@ -323,4 +322,4 @@ Or:
 ---
 
 *This book is based on Claude Code (claude-sonnet-4-6), as of March 2026*
-*Some features and commands may change with version updates—refer to official docs for the latest*
+*Some features and commands may change with version updates — refer to official docs for the latest*

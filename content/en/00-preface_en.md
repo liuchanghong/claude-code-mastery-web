@@ -2,11 +2,7 @@
 
 ---
 
-## TL;DR
-
-> You've probably been using Claude Code to "generate code."
-> Its real power is helping you think through problems, understand systems, and make decisions.
-> That gap is what separates people who use the tool from people who own it.
+The reason most people don't get more out of Claude Code has nothing to do with the model. It's context.
 
 ---
 
@@ -16,7 +12,7 @@
 
 The crash is in `viewDidLoad`, but you can't see why. You open Claude, paste the code, and ask it to find the problem.
 
-Claude gives you an analysis that sounds plausible. You make the change, run it—still crashing.
+Claude gives you an analysis that sounds plausible. You make the change, run it — still crashing.
 
 You ask again. It answers. You change it again. An hour later, you discover the real culprit: a singleton three files away, causing a memory issue under a race condition.
 
@@ -42,11 +38,11 @@ Paste code in, copy answers out. Efficiency goes up maybe 20%, but something alw
 
 **Type 2: Conversation-Driven**
 
-Treat Claude like a smart colleague, solve things through dialogue. 3–5x more effective—but it takes a lot of steering.
+Treat Claude like a smart colleague, solve things through dialogue. 3–5x more effective — but it takes a lot of steering.
 
 **Type 3: Systems Thinker**
 
-Claude Code is woven into the whole workflow. It does the right thing at the right time without constant hand-holding. Not just faster—better.
+Claude Code is woven into the whole workflow. It does the right thing at the right time without constant hand-holding. Not just faster — better.
 
 This book trains you from Type 1 to Type 3.
 
@@ -56,17 +52,17 @@ This book trains you from Type 1 to Type 3.
 
 By the end, a few things will click:
 
-- Claude Code's greatest strength isn't writing code—it's helping you understand a codebase you've never seen before
+- Claude Code's greatest strength isn't writing code — it's helping you understand a codebase you've never seen before
 - Your prompt quality matters more than the model's capability
 - CLAUDE.md is the single most underrated feature in the whole tool
-- Workflow integration is the real multiplier
+- Workflow integration is where the real gains compound
 - An iOS developer who actually knows this tool can do the work of three people
 
 ---
 
 ## What This Book Won't Cover
 
-How to cheat on interviews. Any technique I haven't personally shipped code with. Every technique here has been battle-tested. This is experience, not theory.
+How to cheat on interviews. Any technique I haven't personally shipped code with. Every technique here has been tested in the real world. This is experience, not theory.
 
 ---
 

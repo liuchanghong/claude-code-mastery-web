@@ -1,12 +1,8 @@
-# Chapter 10: Advanced Techniques — Join the 1%
+# Chapter 10: Advanced Techniques
 
 ---
 
-## TL;DR
-
-> This chapter is the dividing line: previous techniques help you use Claude Code well.
-> These techniques put you beyond 99% of users.
-> Custom commands, Hooks, MCP, parallel tasks—each one changes how you work.
+Custom commands, Hooks, MCP, parallel sessions — each one changes how much Claude Code can do for you. These are the techniques that separate developers who use the tool from developers who've made it their own.
 
 ---
 
@@ -253,7 +249,7 @@ In `~/.claude.json`:
 
 ## Advanced Technique 4: Parallel Work (Subagents)
 
-The most underrated advanced technique: **handling multiple independent tasks simultaneously**.
+Handling multiple independent tasks simultaneously is one of the most underused techniques.
 
 ### When to Use Parallel
 
@@ -268,7 +264,7 @@ claude
 
 # Do this instead (parallel):
 claude
-> I need three things done simultaneously—please handle in parallel:
+> I need three things done simultaneously — please handle in parallel:
 >
 > Task 1: Analyze code quality in Sources/Features/Home/
 > Task 2: Generate unit tests for Sources/Core/Network/
@@ -304,7 +300,7 @@ Compresses conversation history into a summary, freeing context space.
 ```bash
 # Before ending the current session
 claude
-> Summarize the key points of what we discussed—I'll use it in a new session
+> Summarize the key points of what we discussed — I'll use it in a new session
 
 # Open a new session
 claude
@@ -373,29 +369,8 @@ Integrate Claude Code into your automation pipeline:
 
 ---
 
-## Chapter Summary: The Advanced Techniques Pyramid
+Think of these techniques as layers. Context management is the foundation — every long session benefits from it. Custom commands make your frequent workflows one keystroke. Hooks automate the safety nets. Parallel tasks multiply throughput. MCP breaks through Claude's default boundaries entirely.
 
-```
-                    /\
-                   /  \
-                  / MCP  \        ← Connect external systems, break Claude's boundaries
-                 /________\
-                /          \
-               /   Hooks    \     ← Automated event responses, reduce manual steps
-              /______________\
-             /                \
-            /  Custom Commands  \ ← Personalized workflow, complex tasks in one command
-           /____________________\
-          /                      \
-         /   Context Management   \ ← Maintain quality through long sessions
-        /________________________\
-       /                          \
-      /       Parallel Tasks        \ ← Do multiple things at once, multiplied efficiency
-     /____________________________\
-```
-
-Each level up requires more setup but delivers exponential efficiency gains.
-
----
+Each layer builds on the others, and each one compounds your output.
 
 [→ Chapter 11: Workflows & Automation](./11-workflows-and-automation_en.md)

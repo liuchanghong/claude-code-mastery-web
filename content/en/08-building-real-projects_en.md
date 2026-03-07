@@ -2,11 +2,7 @@
 
 ---
 
-## TL;DR
-
-> Using Claude Code to build a complete feature isn't "letting it write code for you."
-> It's making it your **technical architecture partner**—designing together, implementing together, validating together.
-> This chapter walks through a complete end-to-end example of the right collaboration model.
+Using Claude Code to build a complete feature isn't "letting it write code for you." It's making it your technical architecture partner — designing together, implementing together, validating together. This chapter walks through what that actually looks like, end to end.
 
 ---
 
@@ -35,7 +31,7 @@ claude
 > 2. What data needs to be cached (which API calls are most frequent)?
 > 3. Which places in the code will need to change due to the "error on no network" design?
 >
-> Analysis only—no code
+> Analysis only — no code
 ```
 
 Claude's analysis gives you a clear picture of the current state and the scope of changes.
@@ -56,7 +52,7 @@ claude
 > I'm leaning toward the approach with minimum changes but best results
 ```
 
-Let Claude give options; you make the decision. That's the right human-machine division of labor.
+Let Claude give options; you make the decision. That's the right division of labor.
 
 ---
 
@@ -74,7 +70,7 @@ claude
 > - Estimate complexity for each task
 > - Mark which tasks must come before others
 >
-> Format as a list—I'll use this as my implementation guide
+> Format as a list — I'll use this as my implementation guide
 ```
 
 **Important principle: break large features into small steps, each independently committable.**
@@ -155,7 +151,7 @@ claude
 > - Follows NavigationStack without covering the NavigationBar
 >
 > Reference existing Banner components in Design System, keep consistent visual style
-> Write the SwiftUI component first without integrating—let me Preview it first
+> Write the SwiftUI component first without integrating — let me Preview it first
 ```
 
 ---
@@ -272,7 +268,7 @@ claude
 # End of each day
 claude
 > Today I completed the OfflineBanner component and NavigationStack integration
-> Write a brief progress summary—I'll save it to PROGRESS.md
+> Write a brief progress summary — I'll save it to PROGRESS.md
 > That way we have clear context to start tomorrow
 ```
 

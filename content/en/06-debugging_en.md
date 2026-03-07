@@ -2,11 +2,7 @@
 
 ---
 
-## TL;DR
-
-> Debugging is the most time-consuming part of development.
-> Claude Code can reduce your problem-localization time by 60-80%.
-> The key is giving it the right information, not letting it "guess."
+The fastest way to debug with Claude Code is also the most obvious: give it everything. Complete error messages, reproduction steps, relevant files. No guessing.
 
 ---
 
@@ -52,7 +48,7 @@ Provide if available:
 >
 > The relevant code is the handleImagePick() function in ProfileViewController.swift
 >
-> Help me analyze the crash cause—don't change code yet, just tell me your assessment
+> Help me analyze the crash cause — don't change code yet, just tell me your assessment
 ```
 
 ### Reading Crash Logs
@@ -231,7 +227,7 @@ This happens. Here are strategies to get unstuck:
 > What are the areas you don't have enough information to judge?
 ```
 
-Claude will tell you what it's uncertain about, which is more valuable than a wrong answer.
+Claude will tell you what it's uncertain about, which is more valuable than a confident wrong answer.
 
 ---
 
@@ -245,18 +241,6 @@ Claude will tell you what it's uncertain about, which is more valuable than a wr
 | UIKit Constraint Warning | Full warning text + layout code for related Views |
 | Keychain issues | Error code + calling code + entitlements config description |
 | Push Notification not arriving | Describe registration flow + server config + certificate situation |
-
----
-
-## Chapter Summary
-
-Golden principles of debugging:
-
-1. **Complete > concise**: when debugging, give more rather than let Claude guess
-2. **Analyze before modify**: let Claude tell you its assessment, you confirm, then change
-3. **Hypothesis-driven**: give Claude your own hypotheses, let it help validate them
-4. **Admit limits**: when Claude is uncertain, have it say so—that's valuable
-5. **Write tests to reproduce**: a test that reproduces the bug beats guessing every time
 
 ---
 

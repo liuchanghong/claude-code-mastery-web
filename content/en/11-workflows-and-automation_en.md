@@ -2,17 +2,13 @@
 
 ---
 
-## TL;DR
-
-> Using Claude Code ad-hoc can get you 2-3x efficiency gains.
-> Systematically weaving it into your daily workflow delivers 5-10x.
-> This chapter presents real, copy-ready workflows.
+Using Claude Code for individual tasks gets you a solid efficiency bump. Weaving it into your whole day is a different thing entirely — the gains compound. This chapter has real workflows you can copy.
 
 ---
 
-## A Typical Workday for a 10x Developer
+## A Day That Compounds
 
-### 9:00 AM: Start Work
+### Morning: Start Work
 
 Don't check email first. Do this instead:
 
@@ -27,7 +23,7 @@ claude
 > Give me a "where to pick up today" summary in 3 minutes
 ```
 
-### 9:10 AM: Get Into Flow
+### Getting Into Flow
 
 ```bash
 > Good, continuing work on [feature name]
@@ -49,7 +45,7 @@ claude
 > About to finish for the day. Help me:
 > 1. Write the unfinished work list into PROGRESS.md
 > 2. Write commit messages for all today's changes
-> 3. Quick review of all staged changes—any debug code left over?
+> 3. Quick review of all staged changes — any debug code left over?
 ```
 
 ---
@@ -109,7 +105,7 @@ claude
 > Run git diff --staged
 > Review these changes as a strict reviewer
 > Apply Apple engineer standards
-> No encouragement—only issues
+> No encouragement — only issues
 
 # Polish and commit
 claude
@@ -140,7 +136,7 @@ claude
 
 ## Workflow 4: Understanding a Codebase (Taking Over a Legacy Project)
 
-One of the most underrated use cases for Claude Code.
+This is one of the most underrated use cases for Claude Code.
 
 ### Day 1: Big Picture
 

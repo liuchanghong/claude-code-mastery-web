@@ -2,12 +2,7 @@
 
 ---
 
-## TL;DR
-
-> CLAUDE.md is the file that makes Claude Code remember your rules.
-> Without it, you re-explain the project context every single time.
-> With it, Claude Code acts like a seasoned employee who knows your project.
-> This is the lowest-effort, highest-return configuration you can make.
+One file, configured well, and you never have to re-explain your project again. That's CLAUDE.md — and it's the most underrated feature in Claude Code.
 
 ---
 
@@ -81,7 +76,7 @@ Architecture: MVVM + Clean Architecture (3 layers: View/ViewModel/Repository)
 
 ## Important Conventions
 - Never directly modify APIClient.swift (this file has dedicated code generation)
-- Files in Models/ are auto-generated from Schema—edits will be overwritten
+- Files in Models/ are auto-generated from Schema — edits will be overwritten
 - All network API definitions are in Sources/Core/API/Endpoints.swift
 - UserDefaults is accessed exclusively through AppStorage wrappers, never directly
 
@@ -102,8 +97,8 @@ swift package update
 
 ## Known Issues / Special Cases
 - NavigationStack has a known bug on iOS 16, see issue #123
-- ProfileViewController is legacy code, stay UIKit for now—don't migrate
-- The payment module uses a third-party SDK—be extra careful, always test changes
+- ProfileViewController is legacy code, stay UIKit for now — don't migrate
+- The payment module uses a third-party SDK — be extra careful, always test changes
 ```
 
 ---
@@ -141,7 +136,7 @@ Put more specific rules in subdirectories:
 ```markdown
 # Network Layer Rules
 
-This directory is critical—be extra careful with changes.
+This directory is critical — be extra careful with changes.
 
 ## Architecture
 - APIClient is a singleton, injected via DI
@@ -158,7 +153,7 @@ This directory is critical—be extra careful with changes.
 
 ## Let Claude Code Write Your CLAUDE.md
 
-Don't start from scratch—let Claude help:
+Don't start from scratch — let Claude help:
 
 ```bash
 claude
@@ -246,7 +241,7 @@ claude
 
 ### Length recommendation
 
-- Project CLAUDE.md: 100-300 lines is the ideal range
+- Project CLAUDE.md: 100–300 lines is the sweet spot
 - Too short: no value
 - Too long: Claude may miss important parts
 

@@ -2,10 +2,7 @@
 
 ---
 
-## TL;DR
-
-> Claude Code can understand Git history, write commit messages, and do code reviews.
-> Integrating it into your Git workflow is one of the simplest ways to double your efficiency.
+Claude Code understands Git history, writes commit messages, and reviews diffs. Weaving it into your Git workflow is one of the simplest ways to raise your daily output.
 
 ---
 
@@ -74,7 +71,7 @@ claude
 > Only list important issues, skip optimization suggestions
 ```
 
-This habit catches 70% of problems before PR review.
+This habit catches most problems before PR review.
 
 ---
 
@@ -196,7 +193,7 @@ claude
 > 1. Long-running feature branches conflict badly with main
 > 2. Emergency hotfixes and feature development get mixed together
 >
-> Give me advice for improving the branch strategy—don't overcomplicate it
+> Give me advice for improving the branch strategy — don't overcomplicate it
 ```
 
 ---
@@ -242,16 +239,6 @@ claude
 
 ---
 
-## Chapter Summary
-
-Git integration value ranking:
-
-1. **Pre-commit review**: highest ROI, make it a habit
-2. **Let Claude write commit messages**: saves time, cleaner history
-3. **Merge conflict resolution**: saves huge time and frustration
-4. **Code archaeology**: the killer tool for understanding unfamiliar codebases
-5. **PR description generation**: makes team collaboration smoother
-
----
+In order of payback: pre-commit review makes the biggest day-to-day difference, letting Claude write commit messages keeps your history clean, merge conflict resolution saves frustration, and code archaeology is invaluable when you inherit an unfamiliar codebase.
 
 [→ Chapter 6: The Art of Debugging](./06-debugging_en.md)

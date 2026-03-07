@@ -1,18 +1,14 @@
-# Chapter 13: The Expert Mindset — The Final Leap from "Can Use" to "Mastery"
+# Chapter 13: The Expert Mindset
 
 ---
 
-## TL;DR
-
-> You've finished the technical techniques. But becoming an expert takes more:
-> a way of thinking that lets you use Claude Code effectively in any situation.
-> This chapter is philosophy—and philosophy determines your ceiling.
+Everything in the previous chapters is technique. This one is about thinking — and thinking determines how far the techniques take you.
 
 ---
 
 ## The Real Difference Between Experts and Average Users
 
-It's not the number of techniques—it's **the quality of the questions**.
+It's not the number of techniques — it's **the quality of the questions**.
 
 An average user asks: **"How do I fix this code?"**
 
@@ -20,7 +16,7 @@ An expert asks: **"Help me understand the role this code plays in the entire sys
 then analyze the chain reactions that changing it might trigger,
 and finally give me a fix based on that analysis."**
 
-The difference isn't question length—it's **depth of thinking**.
+The difference isn't question length — it's **depth of thinking**.
 
 ---
 
@@ -52,7 +48,7 @@ Then use this framework to tell Claude:
 
 ## Core Thinking Mode 2: Layered Validation
 
-**Validate large tasks in layers—don't wait until the end to find out you went the wrong direction.**
+**Validate large tasks in layers — don't wait until the end to find out you went the wrong direction.**
 
 ```
               /\
@@ -77,14 +73,14 @@ Every time you start a task, ask first:
 
 ---
 
-## Core Thinking Mode 2: Claude as "Rubber Duck" + "Expert Advisor"
+## Core Thinking Mode 3: Claude as "Rubber Duck" + "Expert Advisor"
 
 **An upgraded version of rubber duck debugging:**
 
 When facing a complex problem, don't ask Claude for a solution right away. Instead, **describe the problem to Claude**:
 
 ```bash
-> I'm going to describe a problem I'm thinking through—you don't need to give me a solution.
+> I'm going to describe a problem I'm thinking through — you don't need to give me a solution.
 > Just ask me questions to help me clarify my thinking.
 >
 > Problem: my app launches slowly on some devices, but I'm not sure where the bottleneck is
@@ -109,10 +105,10 @@ Want to learn Swift Concurrency?
 > Read my DataStore.swift
 > There's a lot of DispatchQueue.main.async here
 > What would it look like if I rewrote it using @MainActor?
-> Give me a comparison—use my own code to explain the concept of actors
+> Give me a comparison — use my own code to explain the concept of actors
 ```
 
-Learning with your own code gives you 3x the understanding depth of reading tutorials.
+Learning with your own code gives you far deeper understanding than reading tutorials.
 
 ---
 
@@ -132,7 +128,7 @@ Test: try the same type of problem again
 Capture: record the effective approach in CLAUDE.md or personal notes
 ```
 
-After months of accumulation, you'll have a method for using Claude Code that's uniquely yours—and highly effective.
+After months of accumulation, you'll have a method for using Claude Code that's uniquely yours — and highly effective.
 
 ---
 
@@ -156,7 +152,7 @@ Spend 10 minutes every week analyzing the corrections you made to Claude that we
 
 ### Habit 5: Divide and Conquer Complex Tasks
 
-Any task that takes more than 1 hour to implement—first break it into sub-tasks under 30 minutes each, complete and validate them independently.
+Any task that takes more than 1 hour to implement — first break it into sub-tasks under 30 minutes each, complete and validate them independently.
 
 ### Habit 6: Keep Conversations Lean
 
@@ -164,7 +160,7 @@ In long sessions, regularly use `/compact` or summarize key points and open a ne
 
 ### Habit 7: Give Claude Critical Feedback
 
-When Claude gives a poor answer, tell it specifically what's wrong—don't just start over.
+When Claude gives a poor answer, tell it specifically what's wrong — don't just start over.
 
 ### Habit 8: Learn from Claude
 
@@ -176,7 +172,7 @@ Found a particularly effective phrasing? Record it and put it in your prompt lib
 
 ### Habit 10: Know When Not to Use Claude Code
 
-Simple single-file changes, problems you fully understand, quick API lookups—these don't need Claude Code. Use it where it's truly worth it.
+Simple single-file changes, problems you fully understand, quick API lookups — these don't need Claude Code. Use it where it's truly worth it.
 
 ---
 
@@ -201,7 +197,7 @@ What level of Claude Code user are you?
 - Claude Code is woven into the daily work rhythm
 - Can train team members to use Claude Code
 
-**Expert (top 1%):**
+**Expert:**
 - Uses MCP to connect external systems
 - Integrates Claude Code into CI/CD
 - Can build full understanding of an unfamiliar project in a single day
@@ -218,11 +214,11 @@ It makes mistakes. Its knowledge has a cutoff date. It doesn't know your busines
 As a developer, your responsibilities are:
 - **You understand every line of code you ship** (even if Claude generated it)
 - **You can explain every architecture decision**
-- **You own code quality**—not "the AI said to do it this way"
+- **You own code quality** — not "the AI said to do it this way"
 
 Claude Code is a tool that makes you more powerful, not a replacement for your thinking.
 
-**Use it well—but always keep your judgment.**
+**Use it well — but always keep your judgment.**
 
 ---
 
@@ -230,7 +226,7 @@ Claude Code is a tool that makes you more powerful, not a replacement for your t
 
 After reading this book, you have three options:
 
-**Option A (conservative):** Start with a task you're working on today—replace one manual step with Claude Code. Build up the feel.
+**Option A (conservative):** Start with a task you're working on today — replace one manual step with Claude Code. Build up the feel.
 
 **Option B (active):** Today, configure CLAUDE.md, create 3 custom commands, and start a brand new way of working tomorrow.
 

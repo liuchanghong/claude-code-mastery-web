@@ -2,10 +2,7 @@
 
 ---
 
-## TL;DR
-
-> Claude Code 能理解 Git 历史、写 commit message、做 code review。
-> 把它融入 Git 工作流，是让效率翻倍最简单的方法之一。
+Claude Code 能理解 Git 历史、写 commit message、做 code review。把它融入 Git 工作流，是让效率翻倍最自然的方式之一。
 
 ---
 
@@ -243,15 +240,7 @@ claude
 
 ---
 
-## 本章总结
-
-Git 集成的价值排序：
-
-1. **Pre-commit review**：最高 ROI，养成习惯
-2. **让 Claude 写 commit message**：省时间，历史更清晰
-3. **Merge conflict 处理**：省大量时间和痛苦
-4. **代码考古**：理解陌生代码库的利器
-5. **PR description 生成**：让团队协作更顺畅
+把这些操作养成习惯，Git 历史会越来越清晰，协作也会顺畅很多。从 pre-commit review 开始——它能在问题进入代码库之前就帮你发现它们。
 
 ---
 

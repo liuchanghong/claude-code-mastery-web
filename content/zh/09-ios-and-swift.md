@@ -2,15 +2,11 @@
 
 ---
 
-## TL;DR
-
-> iOS 开发有很多 Claude Code 特别擅长的场景。
-> 这章是写给 iOS 开发者的专属攻略，
-> 涵盖 Swift 迁移、SwiftUI、Xcode 配置、App Store 准备等。
+iOS 开发有很多 Claude Code 特别擅长的场景。这章是写给 iOS 开发者的专属攻略，涵盖 Swift 迁移、SwiftUI、Xcode 配置、App Store 准备等。
 
 ---
 
-## Claude Code 最擅长的 iOS 任务排行榜
+## Claude Code 在 iOS 开发中最有价值的场景
 
 1. **代码迁移**：ObjC→Swift、UIKit→SwiftUI、completion→async/await
 2. **理解复杂 API**：UIKit 的生命周期、SwiftUI 的数据流
@@ -301,7 +297,7 @@ claude
 
 ---
 
-## 本章总结：iOS 开发者的 Claude Code 使用清单
+## iOS 开发者的日常参考清单
 
 每天工作中，这些场景优先用 Claude Code：
 

@@ -2,10 +2,7 @@
 
 ---
 
-## TL;DR
-
-> Installation takes 2 minutes. Real configuration takes 20 minutes but pays back 20x.
-> The most important part of this chapter isn't "how to install"—it's "what to do after installing."
+Installation takes 2 minutes. What you do after that is the actual setup — and most people skip it entirely.
 
 ---
 
@@ -98,7 +95,7 @@ claude --continue
 claude -c
 ```
 
-Resumes the last session, keeping previous context. **This is useful—don't forget it.**
+Resumes the last session, keeping previous context. **This is useful — don't forget it.**
 
 ### Resume a Specific Session
 
@@ -127,7 +124,7 @@ claude --dangerously-skip-permissions
 
 ## Your First Real Configuration: Create CLAUDE.md
 
-This is the **most underrated configuration step**.
+This is the most underrated configuration step.
 
 Create a `CLAUDE.md` file in your project root:
 
@@ -221,7 +218,7 @@ claude
 > Find the most obvious code quality issue, tell me where it is, and ask whether I want to fix it
 ```
 
-Completing these 4 steps gives you a real feel for Claude Code's actual capabilities.
+Completing these 4 steps gives you a real feel for what Claude Code can actually do.
 
 ---
 

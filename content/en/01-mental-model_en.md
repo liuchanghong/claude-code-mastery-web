@@ -2,12 +2,7 @@
 
 ---
 
-## TL;DR
-
-> Claude Code is an AI Agent running in your local environment.
-> It reads files, writes files, runs commands, and queries the internet.
-> What it sees = the context you give it + what it finds itself.
-> Get this right and 90% of "why is Claude behaving weird" makes sense.
+Claude Code is an AI Agent running in your local environment — not a chatbot. That distinction changes everything about how you use it.
 
 ---
 
@@ -107,8 +102,6 @@ Your first job is always: give it enough background.
 Best practice: use both. Claude Code for understanding and design; completion tools for fast implementation.
 
 ---
-
-## Check Your Understanding
 
 Can you answer these?
 

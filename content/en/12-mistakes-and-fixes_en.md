@@ -2,11 +2,7 @@
 
 ---
 
-## TL;DR
-
-> Most people fall into the same traps.
-> This chapter distills hard-won experience so you avoid months of stumbling.
-> Every mistake has a concrete fix.
+Most people fall into the same traps. This chapter distills experience from hundreds of hours of real use so you can skip months of stumbling. Every mistake has a specific fix.
 
 ---
 
@@ -33,7 +29,7 @@ Claude Code doesn't know your project's architecture. Generated code is generic,
 # Give it context, have it match your patterns
 > Read the code in Sources/Features/Profile/
 > I want to add similar login checking logic to the Cart module
-> Follow the Profile module's pattern—don't invent a new one
+> Follow the Profile module's pattern — don't invent a new one
 ```
 
 **Principle: let Claude imitate, not invent.**
@@ -62,7 +58,7 @@ Iron rule: always have Claude explain the root cause before any change
 > After I choose an approach, then write code
 ```
 
-**"Diagnose first, prescribe later"—this principle applies to both debugging and feature development.**
+**"Diagnose first, prescribe later" — this applies to both debugging and feature development.**
 
 ---
 
@@ -79,7 +75,7 @@ Iron rule: always have Claude explain the root cause before any change
 
 ### Fix
 
-**Don't describe code—give it the code.**
+**Don't describe code — give it the code.**
 
 ```bash
 # Bad
@@ -148,7 +144,7 @@ Build a "verify before acting" habit:
 
 # Verify logic
 > Walk through your logic with this test case: [specific case]
-> The result should be [expected result]—can your approach handle this correctly?
+> The result should be [expected result] — can your approach handle this correctly?
 
 # Verify impact
 > Will this change affect [related feature]? Why?
@@ -170,7 +166,7 @@ Let Claude write all the code
 
 ### Fix
 
-**Claude Code should help you do things you understand faster—not help you skip understanding.**
+**Claude Code should help you do things you understand faster — not help you skip understanding.**
 
 When Claude generates complex code:
 
@@ -227,7 +223,7 @@ Make maintaining CLAUDE.md a habit:
 
 **Do one thing at a time.**
 
-Any task that looks "complex"—decompose first:
+Any task that looks "complex" — decompose first:
 
 ```bash
 > I want to do [big task]
@@ -246,7 +242,7 @@ Any task that looks "complex"—decompose first:
 ### Symptoms
 
 ```
-Claude: "This might be issue X, but I'm not sure—need more info to verify..."
+Claude: "This might be issue X, but I'm not sure — need more info to verify..."
 You: directly go fix X
 → Fix was wrong
 ```
@@ -275,7 +271,7 @@ When Claude expresses uncertainty, **eliminate the uncertainty before acting**:
 
 ### Fix
 
-For pure Swift/iOS API reference, go directly to [Apple's official docs](https://developer.apple.com) or Dash—it's more accurate.
+For pure Swift/iOS API reference, go directly to [Apple's official docs](https://developer.apple.com) or Dash — it's more accurate.
 
 Claude Code's advantage is analyzing and applying things **in the context of your specific code**:
 
